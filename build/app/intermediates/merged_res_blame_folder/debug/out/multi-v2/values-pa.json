@@ -1,16 +1,33 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.proyecto_final.app-mergeDebugResources-9:/values-pa/values-pa.xml",
+            "outputFile": "com.example.proyecto_final.app-mergeDebugResources-11:/values-pa/values-pa.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-3\\284a410c767ad6c7a2b0ffc8d8d85981\\transformed\\core-1.6.0\\res\\values-pa\\values-pa.xml",
+                    "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-3\\fe0f9d029ae64a45aabc315b674f47a1\\transformed\\jetified-exoplayer-core-2.18.7\\res\\values-pa\\values-pa.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,126,191,268,334,409,475,574,670",
+                        "endColumns": "70,64,76,65,74,65,98,95,84",
+                        "endOffsets": "121,186,263,329,404,470,569,665,750"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-3\\a6a29264acf97bdb3027293ba8b3bb0c\\transformed\\core-1.7.0\\res\\values-pa\\values-pa.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
                         "endColumns": "100",
                         "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "755",
+                        "endColumns": "100",
+                        "endOffsets": "851"
                     }
                 }
             ]

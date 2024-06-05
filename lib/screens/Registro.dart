@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: const Text("Registro de Usuario"),
       ),
-      body: Cuerpo(),
+      body:SingleChildScrollView(child: Cuerpo()) 
     );
   }
 }
