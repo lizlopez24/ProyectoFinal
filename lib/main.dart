@@ -14,6 +14,7 @@ class Bienvenida extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Techflix",
       home: Home(),
     );
@@ -25,12 +26,12 @@ class Home extends StatefulWidget {
   @override
   State<Home> createState() => _HomeState();
 }
-
+int indice=0;
 class _HomeState extends State<Home> {
-  int indice=0;
+  
   @override
   Widget build(BuildContext context) {
-    List <Widget> screens=[Cuerpo(),RegistroApp(), LoginApp(),CatalogoApp(),ReproducionApp()];
+    final List <Widget> screens=[Cuerpo(context),CatalogoApp(),ReproducionApp()];
     return Scaffold(
       appBar: AppBar(
         title: const Text("Techflix"),
@@ -46,8 +47,8 @@ class _HomeState extends State<Home> {
         },
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.app_registration),label: "Registro"),
-          BottomNavigationBarItem(icon: Icon(Icons.login),label: "Login"),
+          //BottomNavigationBarItem(icon: Icon(Icons.app_registration),label: "Registro"),
+          //BottomNavigationBarItem(icon: Icon(Icons.login),label: "Login"),
           BottomNavigationBarItem(icon: Icon(Icons.list),label: "Catalogo"),
           BottomNavigationBarItem(icon: Icon(Icons.video_camera_back),label: "Reproducir")
         ]
@@ -56,7 +57,7 @@ class _HomeState extends State<Home> {
   }
 }
 
-Widget Cuerpo(){
+Widget Cuerpo(context){
   return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -73,8 +74,14 @@ Widget Cuerpo(){
           ),
           Row(
             children: [
-              BotonRegistro(),
-              BotonLogin()
+              Container(
+                padding: EdgeInsets.only(left: 55,top: 50),
+                child: BotonRegistro(context)
+              ),
+              Container(
+                padding: EdgeInsets.only(left: 55, top: 50),
+                child: BotonLogin(context)
+              ),
             ],
           ),
       ],)
@@ -84,23 +91,29 @@ Widget Cuerpo(){
 
 Widget Inicio(){
   return Container(
-      padding: EdgeInsets.all(50),
-      child: Text("Bienvenido a tu aplicacion favorita", style: TextStyle(fontSize: 35, fontFamily: 'Georgia', fontStyle: FontStyle.italic, fontWeight: FontWeight.bold)),
+      padding: EdgeInsets.all(40),
+      child: Text("Bienvenido a tu aplicacion favorita de streaming", style: TextStyle(fontSize: 30, fontFamily: 'Georgia', fontStyle: FontStyle.italic, fontWeight: FontWeight.bold)),
   );
 }
 
-Widget BotonRegistro(){
+Widget BotonRegistro(context){
   return(
     FilledButton(onPressed: (){
-
+      Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => RegistroApp()),
+          );
     }, child: Text("Registrarse"))
   );
 }
 
-Widget BotonLogin(){
+Widget BotonLogin(context){
   return(
     FilledButton(onPressed: (){
-
+      Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => LoginApp()),
+          );
     }, child: Text("Iniciar Sesión"))
   );
 }

@@ -4,7 +4,7 @@
             "outputFile": "com.example.proyecto_final.app-mergeDebugResources-9:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\DELL\\OneDrive\\Documents\\Cuarto Semestre\\Moviles III\\Proyectos\\Proyectos\\Ejercicio Flutter\\proyecto_final\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "C:\\Users\\DELL\\OneDrive\\Documents\\Cuarto Semestre\\Moviles III\\Proyecto Final\\ProyectoFinal\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
